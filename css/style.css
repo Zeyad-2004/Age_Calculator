@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+:root{
+    --border-color: hsl(0, 0%, 86%);
+    --main-word: hsl(0, 0%, 8%);
+    --pre-value: #8a8a8a;
+    --error: hsl(0, 100%, 67%);
+    --number: hsl(259, 100%, 65%);
+    
+    --main-font: 'Poppins', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 32px;
+    font-family: var(--main-font);
+
+    color: var(--pre-value)
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+
+    background-color: #f0f0f0;
+
+}
+.main{
+    width: 700px;
+    border-radius: 20px 20px 25% 20px;
+    padding: 50px;
+    background-color: #fff;
+}
+.main .input{
+    display: flex;
+    max-width: 100px;
+}
+.input>*{
+    display: flex;
+    flex-direction: column;
+}
+.input .box :nth-child(1){
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: var(--pre-value)
+}
+.input .box :nth-child(3){
+    display: none;
+    margin-top: 10px;
+    padding-right: 30px;
+    
+    font-size: 10px;
+    color: var(--error);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+::placeholder {
+    color: var(--pre-value);
+    font-size: 25px
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input{
+    width: 130px;
+    padding: 5px 20px;
+    margin-right: 30px;
+    border-radius: 5px;
+    border: 2px solid #ededed;
+    
+    font-size: 32px;
+    color: black;
+}
+
+
+.space{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: 60px 0 20px 0;
+}
+.space .line{
+    width: 5000px;
+    height: 1px;
+    border: 2px solid #ededed;
+}
+.space .button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.button{
+    width:70px;
+    height: 70px;
+    font-size: 40px;
+    border: none;
+
+    color: white;
+    background-color: var(--number);
+    border-radius: 50%;
+
+    position: absolute;
+    cursor: pointer;
+}
+
+.result>* {
+    display: flex;
+}
+.result div{
+    height: 100px;
+}
+.result div i{
+    font-size: 90px;
+    font-weight: 800;
+    color: var(--number);
+
+}
+.result h1 i{
+    padding: 0;
+    font-weight: 800;
+    font-size: 90px;
+    color: #000;
+    margin-left: 10px; 
+}
+
+
+@media (max-width: 400px){
+    .main{
+        max-width: 350px;
+        padding: 50px 30px;
+    }
+    input{
+        width: 90px;
+        padding: 10px;
+        font-size: 24px;
+    }
+    .box{
+        max-width: 100px;
+    }
+    .space{
+        margin: 70px 0 40px 0;
+        justify-content: center;
+    }
+    .result div{
+        height: 60px;
+    }
+    .result div i{
+        font-size: 50px;
+    }
+}
